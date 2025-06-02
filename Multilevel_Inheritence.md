@@ -26,7 +26,31 @@ To write a Python program that uses multilevel inheritance to get and display a 
    - Print all details using class methods.
 
 ## Program
-Add code here
+class person:
+    def __init__(self,name):
+        self.name=name
+    
+class Age(person):
+    def __init__(self,name,age):
+        super().__init__(name)
+        self.age=age
+        
+class ID(Age):
+    def __init__(self,name,age,id):
+        super().__init__(name,age)
+        self.id=id
+        
+    def display(self):
+        print(self.name , self.age , self.id)
+        
+name=input()
+age=int(input())
+id=int(input())
+p=ID(name,age,id)
+p.display()
+
 
 ## Sample Output
-
+![image](https://github.com/user-attachments/assets/098c4d79-480c-47c1-9a7f-5b26e707955b)
+##Result
+The program defines a Node class for doubly linked list nodes and a DoublyLinkedList class to manage the list. It inserts elements at the end, maintaining previous and next references, and prints the elements in order when traversed. The output correctly displays the inserted elements in sequence.
